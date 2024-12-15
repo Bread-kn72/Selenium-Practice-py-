@@ -1,6 +1,13 @@
+import sys
+import os
+
+# 최상단 디렉터리를 sys.path에 추가
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(project_root)
+
 from selenium import webdriver
-from ..Pages.google_home_page import GoogleHomePage
-from ..Pages.google_results_page import GoogleResultsPage
+from Pages.google_home_page import GoogleHomePage
+from Pages.google_results_page import GoogleResultsPage
 
 def main():
     # WebDriver 초기화 (ChromeDriver가 PATH에 설정되어 있다고 가정)
